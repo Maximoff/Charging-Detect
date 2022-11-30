@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Обнаружение зарядки</string>
+	<string name="background">Фоновый сервис</string>
+	<string name="charging">Заряжается!</string>
+	<string name="error">Ошибка!</string>
+	<string name="et_hint">Введите путь к звуку</string>
+	<string name="save">Сохранить</string>
+	<string name="saved">Сохранено!</string>
+	<string name="service_name">Сервис зарядки</string>
+	<string name="test">Тест</string>
+	<string name="vibration">Вибрация</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="ru.maximoff.charging">
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme"
+		android:resizeableActivity="true">
+		<activity
+			android:name=".MainActivity"
+			android:enabled="true"
+			android:configChanges="orientation|screenSize"
+			android:windowSoftInputMode="stateHidden|adjustResize"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<receiver
+			android:enabled="true"
+			android:name=".ChargingReceiver"/>
+		<receiver
+			android:enabled="true"
+			android:name=".BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+				<action android:name="ru.maximoff.charging.RESTART_SERVICE"/>
+			</intent-filter>
+		</receiver>
+		<service
+			android:enabled="true"
+			android:label="@string/service_name"
+			android:name=".SoundService"/>
+		<service
+			android:enabled="true"
+			android:label="@string/background"
+			android:name=".BackgroundService"/>
+	</application>
+</manifest>

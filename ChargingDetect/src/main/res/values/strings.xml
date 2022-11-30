@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Charging Detect</string>
+	<string name="background">Background service</string>
+	<string name="charging">Charging!</string>
+	<string name="error">Error!</string>
+	<string name="et_hint">Enter sound path</string>
+	<string name="save">Save</string>
+	<string name="saved">Saved!</string>
+	<string name="service_name">Charging Service</string>
+	<string name="test">Test</string>
+	<string name="vibration">Vibration</string>
+</resources>
